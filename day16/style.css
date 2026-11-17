@@ -57,3 +57,10 @@ main {
 section + section {
   margin-top: 32px;
 }
+
+main section {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
