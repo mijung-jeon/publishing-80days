@@ -90,6 +90,7 @@ footer {
   line-height: 1.6;
 }
 
+/* 모바일 뷰 */
 @media (max-width: 768px) {
   body {
     background-color: #ffffff;
@@ -105,6 +106,9 @@ footer {
     display: none;
   }
   .menu-toggle {
+    display: block;
+  }
+  nav.is-open {
     display: block;
   }
 }
