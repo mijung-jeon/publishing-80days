@@ -111,4 +111,8 @@ footer {
   nav.is-open {
     display: block;
   }
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
 }
