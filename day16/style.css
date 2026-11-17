@@ -123,4 +123,8 @@ footer {
     flex-direction: column;
     gap: 0;
   }
+  nav a {
+    display: block;
+    padding: 16px 20px;
+  }
 }
