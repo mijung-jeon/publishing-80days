@@ -81,4 +81,8 @@ footer {
   main {
     padding: 32px 16px;
   }
+  header {
+    min-height: 64px;
+    padding: 0 16px;
+  }
 }
