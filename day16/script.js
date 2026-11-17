@@ -20,3 +20,9 @@ menuLinks.forEach((link) => {
     menuButton.setAttribute("aria-label", "메뉴 열기");
   });
 });
+
+const event = document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    console.log("Escape 키 입력");
+  }
+});
