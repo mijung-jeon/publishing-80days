@@ -9,9 +9,11 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", isOpen);
 });
 
+// 메뉴클릭시 gnb 닫기
 const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     menuNav.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", false);
   });
 });
