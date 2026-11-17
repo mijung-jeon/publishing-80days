@@ -49,6 +49,10 @@ nav a:focus-visible {
   outline-offset: 4px;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 main {
   padding: 48px 24px;
   min-height: 400px;
@@ -87,5 +91,8 @@ footer {
   }
   nav {
     display: none;
+  }
+  .menu-toggle {
+    display: block;
   }
 }
