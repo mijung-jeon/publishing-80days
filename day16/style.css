@@ -51,6 +51,14 @@ nav a:focus-visible {
 
 .menu-toggle {
   display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 24px;
+  color: #374151;
+  cursor: pointer;
 }
 
 main {
