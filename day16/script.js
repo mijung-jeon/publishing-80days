@@ -8,6 +8,6 @@ menuButton.addEventListener("click", () => {
 const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    console.log("메뉴 링크 클릭");
+    menuNav.classList.remove("is-open");
   });
 });
