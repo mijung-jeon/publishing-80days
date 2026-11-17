@@ -23,3 +23,9 @@ header {
   align-items: center;
   min-height: 80px;
 }
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
