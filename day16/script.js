@@ -26,5 +26,6 @@ document.addEventListener("keydown", (event) => {
     menuNav.classList.remove("is-open");
     menuButton.setAttribute("aria-expanded", false);
     menuButton.setAttribute("aria-label", "메뉴 열기");
+    menuButton.focus();
   }
 });
