@@ -21,8 +21,10 @@ menuLinks.forEach((link) => {
   });
 });
 
-const event = document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    console.log("Escape 키 입력");
+    menuNav.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", false);
+    menuButton.setAttribute("aria-label", "메뉴 열기");
   }
 });
