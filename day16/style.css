@@ -78,4 +78,7 @@ footer {
   body {
     background-color: #ffffff;
   }
+  main {
+    padding: 36px 16px;
+  }
 }
