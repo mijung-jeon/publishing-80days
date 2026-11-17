@@ -127,4 +127,7 @@ footer {
     display: block;
     padding: 16px 20px;
   }
+  nav li + li {
+    border-top: 1px solid #e5e7eb;
+  }
 }
