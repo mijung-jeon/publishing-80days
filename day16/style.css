@@ -101,9 +101,15 @@ footer {
   header {
     min-height: 64px;
     padding: 0 16px;
+    position: relative;
   }
   nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
   }
   .menu-toggle {
     display: block;
