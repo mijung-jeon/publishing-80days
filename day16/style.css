@@ -60,6 +60,10 @@ nav a:focus-visible {
   color: #374151;
   cursor: pointer;
 }
+.menu-toggle:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 4px;
+}
 
 main {
   padding: 48px 24px;
