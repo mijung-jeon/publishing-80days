@@ -29,6 +29,7 @@ menuLinks.forEach((link) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menuNav.classList.contains("is-open")) {
-    closeMenu(menuButton.focus());
+    closeMenu();
+    menuButton.focus();
   }
 });
