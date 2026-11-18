@@ -22,7 +22,7 @@ menuLinks.forEach((link) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
+  if (event.key === "Escape" && menuNav.classList.contains("is-open")) {
     menuNav.classList.remove("is-open");
     menuButton.setAttribute("aria-expanded", false);
     menuButton.setAttribute("aria-label", "메뉴 열기");
