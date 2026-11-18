@@ -9,6 +9,7 @@ menuButton.addEventListener("click", () => {
   const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
   menuButton.setAttribute("aria-label", status);
   menuButton.setAttribute("aria-expanded", isOpen);
+  menuButton.textContent = isOpen ? "×" : "☰";
 });
 
 // 메뉴클릭시 gnb 닫기
