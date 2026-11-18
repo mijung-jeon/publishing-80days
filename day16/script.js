@@ -12,23 +12,23 @@ menuButton.addEventListener("click", () => {
   menuButton.textContent = isOpen ? "×" : "☰";
 });
 
+function closeMenu() {
+  menuNav.classList.remove("is-open");
+  menuButton.setAttribute("aria-expanded", false);
+  menuButton.setAttribute("aria-label", "메뉴 열기");
+  menuButton.textContent = "☰";
+}
+
 // 메뉴클릭시 gnb 닫기
 const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    menuNav.classList.remove("is-open");
-    menuButton.setAttribute("aria-expanded", false);
-    menuButton.setAttribute("aria-label", "메뉴 열기");
-    menuButton.textContent = "☰";
+    closeMenu();
   });
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menuNav.classList.contains("is-open")) {
-    menuNav.classList.remove("is-open");
-    menuButton.setAttribute("aria-expanded", false);
-    menuButton.setAttribute("aria-label", "메뉴 열기");
-    menuButton.textContent = "☰";
-    menuButton.focus();
+    closeMenu();
   }
 });
