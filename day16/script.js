@@ -35,5 +35,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 function showMessage(message) {
-  console.log(message + "첫 번 째 메시지");
+  console.log(message);
 }
+
+showMessage("첫 번째 메세지");
+showMessage("두 번째 메세지");
