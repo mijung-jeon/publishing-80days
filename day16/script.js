@@ -12,6 +12,7 @@ menuButton.addEventListener("click", () => {
   menuButton.textContent = isOpen ? "×" : "☰";
 });
 
+// 메뉴클릭시 gnb 닫기
 function closeMenu() {
   menuNav.classList.remove("is-open");
   menuButton.setAttribute("aria-expanded", false);
@@ -19,7 +20,6 @@ function closeMenu() {
   menuButton.textContent = "☰";
 }
 
-// 메뉴클릭시 gnb 닫기
 const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -33,3 +33,7 @@ document.addEventListener("keydown", (event) => {
     menuButton.focus();
   }
 });
+
+function showMessage(message) {
+  console.log(message + "첫 번 째 메시지");
+}
