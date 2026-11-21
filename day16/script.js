@@ -54,3 +54,8 @@ function getUserMessage(name, message) {
 
 const result = getUserMessage("이영희", "안녕하세요?");
 console.log(result);
+
+function printMessage(result) {
+	console.log(result);
+}
+printMessage(result);
