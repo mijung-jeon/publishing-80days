@@ -46,3 +46,4 @@ function showUserMessage(name, message) {
 }
 
 showUserMessage("홍길동", "안녕하세요");
+showUserMessage("김철수", "반갑습니다");
