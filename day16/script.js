@@ -47,3 +47,10 @@ function showUserMessage(name, message) {
 
 showUserMessage("홍길동", "안녕하세요");
 showUserMessage("김철수", "반갑습니다");
+
+function getUserMessage(name, message) {
+	return name + ":" + message;
+}
+
+const result = getUserMessage("이영희", "안녕하세요?");
+console.log(result);
