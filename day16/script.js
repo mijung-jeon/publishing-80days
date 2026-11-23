@@ -1,15 +1,19 @@
 const menuButton = document.querySelector(".menu-toggle");
 const menuNav = document.querySelector("nav");
 
+function updateMenuButton(isOpen) {
+  const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
+  menuButton.setAttribute("aria-label", status);
+  menuButton.setAttribute("aria-expanded", isOpen);
+  menuButton.textContent = isOpen ? "×" : "☰";
+}
+
 menuButton.addEventListener("click", () => {
   menuNav.classList.toggle("is-open");
 
   const isOpen = menuNav.classList.contains("is-open");
 
-  const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
-  menuButton.setAttribute("aria-label", status);
-  menuButton.setAttribute("aria-expanded", isOpen);
-  menuButton.textContent = isOpen ? "×" : "☰";
+  updateMenuButton(isOpen);
 });
 
 // 메뉴클릭시 gnb 닫기
@@ -59,10 +63,3 @@ function printMessage(text) {
   console.log(text);
 }
 printMessage(result);
-
-function updateMenuButton(isOpen) {
-  const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
-  menuButton.setAttribute("aria-label", status);
-  menuButton.setAttribute("aria-expanded", isOpen);
-  menuButton.textContent = isOpen ? "×" : "☰";
-}
