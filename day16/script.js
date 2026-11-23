@@ -19,9 +19,7 @@ menuButton.addEventListener("click", () => {
 // 메뉴클릭시 gnb 닫기
 function closeMenu() {
   menuNav.classList.remove("is-open");
-  menuButton.setAttribute("aria-expanded", false);
-  menuButton.setAttribute("aria-label", "메뉴 열기");
-  menuButton.textContent = "☰";
+  updateMenuButton(false);
 }
 
 const menuLinks = document.querySelectorAll("nav a");
