@@ -61,3 +61,8 @@ function printMessage(text) {
   console.log(text);
 }
 printMessage(result);
+
+// array 기초
+const menus = ["회사소개", "서비스", "고객지원"];
+console.log(menus[0]);
+console.log(menus[2]);
