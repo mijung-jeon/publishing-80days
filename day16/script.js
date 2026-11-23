@@ -2,60 +2,67 @@ const menuButton = document.querySelector(".menu-toggle");
 const menuNav = document.querySelector("nav");
 
 menuButton.addEventListener("click", () => {
-	menuNav.classList.toggle("is-open");
+  menuNav.classList.toggle("is-open");
 
-	const isOpen = menuNav.classList.contains("is-open");
+  const isOpen = menuNav.classList.contains("is-open");
 
-	const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
-	menuButton.setAttribute("aria-label", status);
-	menuButton.setAttribute("aria-expanded", isOpen);
-	menuButton.textContent = isOpen ? "×" : "☰";
+  const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
+  menuButton.setAttribute("aria-label", status);
+  menuButton.setAttribute("aria-expanded", isOpen);
+  menuButton.textContent = isOpen ? "×" : "☰";
 });
 
 // 메뉴클릭시 gnb 닫기
 function closeMenu() {
-	menuNav.classList.remove("is-open");
-	menuButton.setAttribute("aria-expanded", false);
-	menuButton.setAttribute("aria-label", "메뉴 열기");
-	menuButton.textContent = "☰";
+  menuNav.classList.remove("is-open");
+  menuButton.setAttribute("aria-expanded", false);
+  menuButton.setAttribute("aria-label", "메뉴 열기");
+  menuButton.textContent = "☰";
 }
 
 const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
-	link.addEventListener("click", () => {
-		closeMenu();
-	});
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
 });
 
 document.addEventListener("keydown", (event) => {
-	if (event.key === "Escape" && menuNav.classList.contains("is-open")) {
-		closeMenu();
-		menuButton.focus();
-	}
+  if (event.key === "Escape" && menuNav.classList.contains("is-open")) {
+    closeMenu();
+    menuButton.focus();
+  }
 });
 
 function showMessage(message) {
-	console.log(message);
+  console.log(message);
 }
 
 showMessage("첫 번째 메세지");
 showMessage("두 번째 메세지");
 
 function showUserMessage(name, message) {
-	console.log(name + " : " + message);
+  console.log(name + " : " + message);
 }
 
 showUserMessage("홍길동", "안녕하세요");
 showUserMessage("김철수", "반갑습니다");
 
 function getUserMessage(name, message) {
-	return name + ":" + message;
+  return name + ":" + message;
 }
 
 const result = getUserMessage("이영희", "안녕하세요?");
 console.log(result);
 
-function printMessage(result) {
-	console.log(result);
+function printMessage(text) {
+  console.log(text);
 }
 printMessage(result);
+
+function updateMenuButton(isOpen) {
+  const status = isOpen ? "메뉴 닫기" : "메뉴 열기";
+  menuButton.setAttribute("aria-label", status);
+  menuButton.setAttribute("aria-expanded", isOpen);
+  menuButton.textContent = isOpen ? "×" : "☰";
+}
