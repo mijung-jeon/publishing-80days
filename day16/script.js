@@ -66,3 +66,6 @@ printMessage(result);
 const menus = ["회사소개", "서비스", "고객지원"];
 console.log(menus[0]);
 console.log(menus[2]);
+
+console.log(menus.length);
+console.log(menus[menus.length - 1]);
