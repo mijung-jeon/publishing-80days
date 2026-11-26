@@ -69,3 +69,7 @@ console.log(menus[2]);
 
 console.log(menus.length);
 console.log(menus[menus.length - 1]);
+
+menus.forEach((menu) => {
+  console.log(menu);
+});
