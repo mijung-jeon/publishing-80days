@@ -73,3 +73,9 @@ console.log(menus[menus.length - 1]);
 menus.forEach((menu, index) => {
   console.log(index, menu);
 });
+
+// createElemnt()
+const list = document.querySelector("#notice-list");
+const item = document.createElement("li");
+item.textContent = "서비스 점검 안내";
+list.appendChild(item);
